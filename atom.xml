@@ -9,7 +9,23 @@
   <link href="https://lgs1975.xyz/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, 秦大人</rights>
   <title>秦野科创</title>
-  <updated>2026-07-22T07:08:07.238Z</updated>
+  <updated>2026-07-25T01:41:09.217Z</updated>
+  <entry>
+    <author>
+      <name>秦大人</name>
+    </author>
+    <content>
+      <![CDATA[<p>图吧工具箱，一款免费开源、绿色免安装的硬件检测与系统维护工具合集，专为电脑硬件爱好者、DIY玩家及普通用户设计。<br>硬件检测与诊断​：提供全面的硬件信息检测工具，覆盖CPU、显卡、内存、硬盘、主板等核心组件，支持一键获取详细参数及实时状态。<br>​​性能测试与评分：内置基准测试工具（如3DMark、AIDA64），可评估硬件性能并生成对比报告，帮助用户优化系统配置。<br>​​系统稳定性验证​​：通过压力测试工具（如Prime95、MemTest86）检验CPU、内存的稳定性，排查潜在故障。<br>​​开源与免费​​：完全免费且开源，用户可自由下载、使用及二次开发，无任何商业捆绑或付费限制。</p><h1 id="CPU处理器工具"><a href="#CPU处理器工具" class="headerlink" title="CPU处理器工具"></a>CPU处理器工具</h1><p>CPU-Z：权威的处理器信息检测工具<br>Prime95：专业CPU压力测试与稳定性检测<br>Core Temp：实时监控CPU核心温度<br>CineBench：专业渲染性能基准测试</p><h1 id="内存检测工具"><a href="#内存检测工具" class="headerlink" title="内存检测工具"></a>内存检测工具</h1><p>MemTest86：权威内存错误检测工具<br>AIDA Memory：内存性能测试与延迟检测<br>Thaiphoon Burner：内存颗粒信息读取工具<br>MaxxMEM：内存带宽性能测试</p><h1 id="显卡测试工具"><a href="#显卡测试工具" class="headerlink" title="显卡测试工具"></a>显卡测试工具</h1><p>GPU-Z：显卡信息检测权威工具<br>3DMark：专业图形性能基准测试<br>FurMark：显卡压力测试烤机工具<br>MSI Afterburner：显卡超频与监控工具</p><h1 id="硬盘存储工具"><a href="#硬盘存储工具" class="headerlink" title="硬盘存储工具"></a>硬盘存储工具</h1><p>CrystalDiskInfo：硬盘健康状态检测<br>HD Tune Pro：硬盘性能测试与坏道检测<br>AS SSD Benchmark：SSD固态硬盘性能测试<br>HDDScan：硬盘扫描与SMART信息<br>​​绿色免安装：无需安装，解压即用，不写入注册表或系统文件。<br>​​跨平台兼容：​​支持Windows XP至Windows 11全版本，适配主流操作系统。<br>​​安全无风险：​​纯检测工具，不修改系统设置，避免潜在安全风险。<br>​​开发者友好：​​开放SDK接口，支持主流编程语言调用，无需授权即可集成到自定义项目中。<br>​​持续更新维护：​​自2014年起长期维护，定期更新工具库。<br>下载链接：<a href="https://qxf1975.lanzn.com/iRAQ63yiw52f">https://qxf1975.lanzn.com/iRAQ63yiw52f</a></p>]]>
+    </content>
+    <id>https://lgs1975.xyz/2026/07/25/09090901111/</id>
+    <link href="https://lgs1975.xyz/2026/07/25/09090901111/"/>
+    <published>2026-07-25T01:30:13.000Z</published>
+    <summary>
+      <![CDATA[<p>图吧工具箱，一款免费开源、绿色免安装的硬件检测与系统维护工具合集，专为电脑硬件爱好者、DIY玩家及普通用户设计。<br>硬件检测与诊断​：提供全面的硬件信息检测工具，覆盖CPU、显卡、内存、硬盘、主板等核心组件，支持一键获取详细参数及实时状态。<br>​​性能测试与评分：内]]>
+    </summary>
+    <title>图吧工具箱</title>
+    <updated>2026-07-25T01:41:09.217Z</updated>
+  </entry>
   <entry>
     <author>
       <name>秦大人</name>
