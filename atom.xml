@@ -9,7 +9,23 @@
   <link href="https://lgs1975.xyz/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, 秦大人</rights>
   <title>秦野科创</title>
-  <updated>2026-08-25T13:32:31.133Z</updated>
+  <updated>2026-10-03T14:31:17.968Z</updated>
+  <entry>
+    <author>
+      <name>秦大人</name>
+    </author>
+    <content>
+      <![CDATA[<h1 id="一键安装包"><a href="#一键安装包" class="headerlink" title="一键安装包"></a>一键安装包</h1><p>这是一个适用于 Windows x64 的单文件安装程序。它内置四个安装文件：前三项按顺序静默安装，火绒打开安装界面由你手动完成。每项软件都可以跳过；最后的 PowerShell 步骤也可以单独跳过。</p><p>交付文件名为 <code>一键安装-可跳过-火绒手动.exe</code>；项目中的打包文件名为 <code>OneClickSetup-SkipOptions.exe</code>。运行整合包时，不需要再把四个原始安装文件放在旁边。</p><h2 id="包含的软件"><a href="#包含的软件" class="headerlink" title="包含的软件"></a>包含的软件</h2><table><thead><tr><th>顺序</th><th>软件</th><th>处理方式</th></tr></thead><tbody><tr><td>1</td><td>7-Zip 26.03</td><td>静默安装</td></tr><tr><td>2</td><td>驱动总裁（<code>9999.exe</code>）</td><td>静默安装</td></tr><tr><td>3</td><td>图吧工具箱 2025.02</td><td>静默安装</td></tr><tr><td>4</td><td>火绒安全软件 6.0.12.1</td><td>打开原安装界面，手动安装</td></tr></tbody></table><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol><li><p>双击 <code>一键安装-可跳过-火绒手动.exe</code>，同意 Windows 的管理员权限提示。</p></li><li><p>在命令行选择安装范围：</p><table><thead><tr><th>输入</th><th>效果</th></tr></thead><tbody><tr><td>直接回车或 <code>A</code></td><td>安装全部四项</td></tr><tr><td><code>H</code></td><td>安装前三项，跳过火绒</td></tr><tr><td><code>S</code></td><td>跳过全部四项</td></tr><tr><td><code>C</code></td><td>自选要跳过的编号，例如 <code>2,4</code></td></tr></tbody></table></li><li><p>单独选择最后的 PowerShell 步骤：直接回车或 <code>Y</code> 表示执行，<code>N</code> 表示跳过。这个选择不影响前面的软件安装范围。</p></li><li><p>若选择安装火绒，请在打开的火绒界面中完成安装，再回到原命令行按回车继续。整合包不会自动判断火绒是否已安装完成。</p></li><li><p>若选择执行 PowerShell 步骤，程序会打开一个新的 PowerShell 窗口并运行以下命令：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://get.activated.win | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure><p>新窗口会保持打开，供你查看输出。关闭它后，原命令行才会显示最终结果；按任意键关闭原命令行。选择 <code>N</code> 时不会打开这个 PowerShell 窗口。</p></li></ol><p>如果只想检查安装包内置文件、不安装软件也不运行网络命令，可以选择 <code>S</code>，然后选择 <code>N</code>。</p><h2 id="进度与日志"><a href="#进度与日志" class="headerlink" title="进度与日志"></a>进度与日志</h2><ul><li>命令行会显示当前软件、已用时间和阶段进度。百分比按<strong>完成的安装步骤数</strong>计算，不代表安装程序内部的真实百分比；安装器长时间没有输出时，耗时仍会继续更新。</li><li>开始前会核对四个内置安装文件的 SHA-256，包括你选择跳过的文件。缺失或校验不符时，流程会停止。</li><li>某个软件安装程序报错时，整合包会记下错误并继续处理其余步骤，最后报告失败。返回码 <code>3010</code> 表示安装程序请求重启。</li><li>日志保存在 <code>%TEMP%\OneClickSetup-日期时间.log</code>。排查问题时，请提供该日志和你选择的安装范围。</li></ul><h2 id="PowerShell-步骤说明"><a href="#PowerShell-步骤说明" class="headerlink" title="PowerShell 步骤说明"></a>PowerShell 步骤说明</h2><p>该命令会从 <code>get.activated.win</code> 下载并立即执行 Microsoft Activation Scripts。网络脚本<strong>不包含在本安装包内</strong>，其内容可能变化，也不受上述四个安装文件的 SHA-256 校验覆盖。请确认你信任该来源后再选择 <code>Y</code>；不需要此步骤时选择 <code>N</code>。</p><h2 id="项目文件"><a href="#项目文件" class="headerlink" title="项目文件"></a>项目文件</h2><ul><li><code>install.ps1</code>：校验、选择菜单、安装流程和日志。</li><li><code>launch.cmd</code>：启动 PowerShell 安装脚本，并在结束时保留命令行结果。</li><li><code>OneClickSetup.sed</code>：Windows IExpress 的单文件打包配置。</li><li><code>OneClickSetup-SkipOptions.exe</code>：构建出的整合安装程序。</li></ul><p>已检查打包文件可以解包、内置脚本与项目文件一致，并完成预检。当前版本尚未在这台电脑上完整执行四项安装及网络脚本；火绒的手动安装结果需要你在运行时确认。</p><h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p><a href="https://qxf1975.lanzn.com/iGVWO4asevad">https://qxf1975.lanzn.com/iGVWO4asevad</a></p>]]>
+    </content>
+    <id>https://lgs1975.xyz/2026/10/03/zswu/</id>
+    <link href="https://lgs1975.xyz/2026/10/03/zswu/"/>
+    <published>2026-10-03T09:33:20.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="一键安装包"><a href="#一键安装包" class="headerlink" title="一键安装包"></a>一键安装包</h1><p>这是一个适用于 Windows x64 的单文件安装程序。它内置四个安装文件：前三项按顺序静默安装，火绒打开安装界面]]>
+    </summary>
+    <title>装系统一键安装</title>
+    <updated>2026-10-03T14:31:17.968Z</updated>
+  </entry>
   <entry>
     <author>
       <name>秦大人</name>
