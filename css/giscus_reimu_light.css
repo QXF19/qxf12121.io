@@ -2,16 +2,16 @@
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
  */
-@import url("https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap");
+@import url("giscus-google-font-css");
 main {
-  --red-0: #ff0000;
-  --red-1: #ff5252;
-  --red-2: #ff7c7c;
-  --red-3: #ffafaf;
-  --red-4: #ffd0d0;
-  --red-5: #ffecec;
-  --red-5-5: #fff3f3;
-  --red-6: #fff7f7;
+  --red-0: light-red-0;
+  --red-1: light-red-1;
+  --red-2: light-red-2;
+  --red-3: light-red-3;
+  --red-4: light-red-4;
+  --red-5: light-red-5;
+  --red-5-5: light-red-5-5;
+  --red-6: light-red-6;
   --color-prettylights-syntax-comment: #6e7781;
   --color-prettylights-syntax-constant: #0550ae;
   --color-prettylights-syntax-entity: #8250df;
@@ -95,9 +95,9 @@ main {
 /* Extensions from @primer/css/alerts/flash.scss */
   --color-social-reaction-bg-hover: var(--color-scale-gray-1);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
-  --cursor-default: url("../images/cursor/reimu-cursor-default.png"), auto;
-  --cursor-pointer: url("../images/cursor/reimu-cursor-pointer.png"), pointer;
-  --cursor-text: url("../images/cursor/reimu-cursor-text.png"), text;
+  --cursor-default: url("cursor-default"), auto;
+  --cursor-pointer: url("cursor-pointer"), pointer;
+  --cursor-text: url("cursor-text"), text;
 }
 /* Extensions from @primer/css/alerts/flash.scss */
 main .pagination-loader-container {
@@ -108,7 +108,7 @@ main .gsc-loading-image {
 }
 main {
   cursor: var(--cursor-default);
-  font-family: 'Mulish','Noto Serif SC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif';
+  font-family: custom-article-families article-families local-article-families;
 }
 a,
 button {
@@ -116,7 +116,7 @@ button {
 }
 pre,
 code {
-  font-family: 'Menlo','Monaco','Consolas','monospace' !important;
+  font-family: custom-code-families code-families local-code-families !important;
 }
 main span:not(button span),
 main p:not(button p),
